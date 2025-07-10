@@ -4,8 +4,7 @@
 
 **Nombre:** Gadiel Ocaña  
 **Carnet:** 231279  
-**Usuario GitHub:** GAOV314  
-
+ 
 ## Descripción del Proyecto
 
 Este proyecto implementa un algoritmo para rellenar polígonos complejos sin el uso de librerías externas, desarrollado en Python utilizando Pygame como base de renderizado. La implementación es capaz de manejar polígonos de cualquier número de vértices, incluyendo figuras cóncavas y polígonos con agujeros internos.
@@ -54,4 +53,14 @@ El algoritmo opera bajo el siguiente principio:
 - **Vértices en Scanline**: Manejo adecuado de casos límite
 - **Bordes Horizontales**: Procesamiento correcto de segmentos horizontales
 
-## Estructura del Código
+## Compilación y Ejecución
+
+### Requisitos
+
+- Python 3.7 o superior
+- Pygame (única librería permitida para el contexto de ventana)
+
+### Instalación de Dependencias
+
+```bash
+pip install pygame
