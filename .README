@@ -1,0 +1,50 @@
+# Algoritmo de Relleno de Polígonos - Laboratorio de Gráficos por Computadora
+
+## Descripción del Proyecto
+
+Este proyecto implementa un algoritmo para rellenar polígonos de más de 4 puntos sin el uso de librerías externas. La solución utiliza el algoritmo **Scanline Fill** para lograr un relleno preciso y eficiente de figuras geométricas complejas.
+
+## Polígonos Implementados
+
+El proyecto renderiza 5 polígonos diferentes con las siguientes características:
+
+- **Polígono 1** (30 puntos): Figura compleja de 10 vértices - Relleno rojo
+- **Polígono 2** (10 puntos): Cuadrilátero - Relleno verde
+- **Polígono 3** (10 puntos): Triángulo - Relleno azul
+- **Polígono 4** (50 puntos): Figura compleja de 18 vértices con agujero - Relleno amarillo
+- **Polígono 5** (30 puntos): Agujero dentro del polígono 4 - Sin relleno
+
+Todos los polígonos tienen contorno blanco para mejor definición visual.
+
+## Algoritmo Utilizado: Scanline Fill
+
+### ¿Por qué Scanline Fill?
+
+Se eligió el algoritmo **Scanline Fill** por las siguientes razones:
+
+1. **Eficiencia**: Procesa línea por línea horizontalmente, minimizando cálculos innecesarios
+2. **Precisión**: Garantiza un relleno exacto sin desbordarse de los bordes
+3. **Versatilidad**: Maneja polígonos convexos, cóncavos y complejos
+4. **Manejo de agujeros**: Permite implementar fácilmente polígonos con huecos internos
+
+### Funcionamiento del Algoritmo
+
+#### 1. Relleno Básico (Polígonos 1, 2, 3)
+
+```python
+def fillPolygon(points, color=None):
+    # 1. Determinar límites verticales del polígono
+    min_y = min(point[1] for point in points)
+    max_y = max(point[1] for point in points)
+    
+    # 2. Para cada línea horizontal (scanline)
+    for y in range(int(min_y), int(max_y) + 1):
+        # 3. Encontrar intersecciones con los bordes
+        intersections = []
+        for cada_borde:
+            if scanline_intersecta_borde:
+                calcular_x_interseccion()
+        
+        # 4. Ordenar intersecciones y rellenar por pares
+        intersections.sort()
+        rellenar_entre_pares_de_intersecciones()
